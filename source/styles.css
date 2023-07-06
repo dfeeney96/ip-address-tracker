@@ -5,7 +5,6 @@
   
   body {
     background-image: url("./images/pattern-bg-mobile.png");
-    background-color: hsl(0, 0%, 59%);
     background-repeat: no-repeat;
     color: hsl(0, 0%, 17%);
     font-family: 'Rubik', sans-serif;
@@ -68,6 +67,15 @@
 
   .card p {
     font-weight: 700;
+  }
+
+  #map {
+    height: 600px;
+    width: 375px;
+    background-color: plum;
+    position: relative;
+    bottom: 154px;
+    z-index: -1;
   }
   
 
