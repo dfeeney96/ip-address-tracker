@@ -42,8 +42,8 @@ let generateMap = (lat, lng) => {
     console.log(L.Icon.Default.prototype._getIconUrl());
 
     let blackIcon = L.icon({
-        iconUrl: "./images/favicon-32x32.png",
-        iconSize: [38, 95],
+        iconUrl: "./source/images/icon-location.svg",
+        iconSize: [50, 60],
         iconAnchor: [lat, lng]
     });
 
