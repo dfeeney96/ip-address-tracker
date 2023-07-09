@@ -22,7 +22,6 @@ let searchData = (searchValue) => {
     fetch(ipifyUrl)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         ipAddressP.text(data.ip);
         locationP.text(`${data.location.region}, ${data.location.country}`);
         timezoneP.text(`UTC ${data.location.timezone}`);
@@ -42,8 +41,14 @@ let generateMap = (lat, lng) => {
 
     console.log(L.Icon.Default.prototype._getIconUrl());
 
+    let blackIcon = L.icon({
+        iconUrl: "./images/favicon-32x32.png",
+        iconSize: [38, 95],
+        iconAnchor: [lat, lng]
+    });
 
-    let marker = L.marker([lat, lng]).addTo(map);
+
+    let marker = L.marker([lat, lng], {icon: blackIcon}).addTo(map);
 }
 
 

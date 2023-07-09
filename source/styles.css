@@ -6,11 +6,11 @@
   body {
     background-image: url("./images/pattern-bg-mobile.png");
     background-repeat: no-repeat;
+    background-size: contain;
     color: hsl(0, 0%, 17%);
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
-    width: 375px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,6 @@
     color: hsl(0, 0%, 100%);
     font-weight: 500;
     font-size: 24px;
-   
     margin: 25px;
   }
 
@@ -70,11 +69,10 @@
   }
 
   #map {
-    height: 600px;
-    width: 375px;
-    background-color: plum;
+    height: calc(100% - 229px);
+    width: 100vw;
     position: relative;
-    bottom: 154px;
+    bottom: 100px;
     z-index: -1;
   }
   
@@ -87,4 +85,64 @@
 
   .attribution a {
       color: hsl(228, 45%, 44%);
+  }
+
+  @media (min-width: 800px) {
+
+    body{
+      background-image: url("./images/pattern-bg-desktop.png");
+      background-repeat: no-repeat;
+      background-size: 100% 250px;
+      width: 100vw;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    input{
+      width: 85%;
+    }
+ 
+    .card {
+      flex-direction: row;
+      width: 80%;
+      height: 150px;
+      max-width: 800px;
+      text-align: left;
+      justify-content: center;
+    }
+
+    .card div:first-of-type{
+      border-left: 0;
+    }
+
+    .card div {
+      padding: 5px 20px 5px;
+      margin: 10px;
+      border-left: 1px solid hsl(0, 0%, 59%);
+    }
+
+    #map{
+      bottom: 70px;
+    }
+
+
+
+
   }
